@@ -36,10 +36,10 @@ const LoginForm: React.FC<Props> = ({ onSuccess }) => {
     if (!validate()) return;
 
     try {
-      const res = await axios.post("https://reqres.in/api/login", {
-        email,
-        password,
-      });
+  const res = await axios.post("https://reqres.in/api/login", {
+  email,
+  password,
+});
 
       onSuccess(res.data.token);
     } catch (err) {
